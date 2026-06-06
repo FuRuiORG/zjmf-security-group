@@ -6,7 +6,7 @@
 
 ## 背景与问题
 
-魔方财务系统中，**直连 dcimcloud 类型产品**的前台产品详情页原生支持"安全组"Tab（由 `DcimCloud` 模块提供完整的 CRUD 界面）。但 **`zjmf_api` 代理模式产品**在 [HostController](app/home/controller/HostController.php#L1453-L1463) 中被**故意过滤掉了**安全组 Tab：
+魔方财务系统中，**直连 dcimcloud 类型产品**的前台产品详情页原生支持"安全组"Tab（由 `DcimCloud` 模块提供完整的 CRUD 界面）。但 **`zjmf_api` 代理模式产品**在 app/home/controller/HostController.php#L1453-L1463 中被**故意过滤掉了**安全组 Tab：
 
 ```php
 // HostController::hostHeader() 中的过滤逻辑
