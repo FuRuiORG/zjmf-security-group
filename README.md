@@ -68,7 +68,7 @@ ProvisionController 检测 zjmf_api 模式
 
 ## 安装部署
 
-### 方法一：手动安装
+### 手动安装
 
 1. 将 `ruinexus_security_group/` 目录上传至服务器：
    ```
@@ -82,13 +82,6 @@ ProvisionController 检测 zjmf_api 模式
 
 4. 访问任意 zjmf_api 代理产品的详情页，验证"安全组"Tab 是否显示
 
-### 方法二：通过 GitHub 下载
-
-```bash
-cd /你的魔方财务目录/public/plugins/addons/
-git clone https://github.com/RuiNexus/zjmf-security-group.git ruinexus_security_group
-```
-
 然后按方法一的步骤 2-4 操作。
 
 ## 文件结构
@@ -100,23 +93,6 @@ ruinexus_security_group/
     ├── install() / uninstall()        # 生命周期钩子
     └── templateAfterServicedetailSuspended()  # 核心：输出注入 JS
 ```
-
-**设计决策：单文件架构。** v1.0.2 起移除了 `.tpl` 模板文件，改用 PHP 直接拼接 JS 字符串返回，彻底消除模板引擎导致的字符泄漏问题。
-
-## 版本历史
-
-| 版本 | 日期 | 变更 |
-|------|------|------|
-| **1.0.0** | 2026-06-06 | 初始版本，通过 hook + fetch(.tpl) 注入安全组 Tab |
-| **1.0.1** | 2026-06-06 | 修复 `ADDON_PATH` 未定义导致模板路径错误 |
-| **1.0.2** | 2026-06-06 | 移除 `.tpl` 模板文件依赖，改用 PHP 直接输出 JS，修复页面 `-->` 字符泄漏 |
-
-## 技术栈
-
-- **后端**: PHP 7.4+ / ThinkPHP 6.x
-- **前端**: jQuery 3.x / Bootstrap 4.x / Bootstrap-Tab
-- **API**: 魔方财务 Hook 系统 / zjmfCurl 上游转发
-- **依赖**: 无第三方依赖
 
 ## License
 
