@@ -1,6 +1,8 @@
 # zjmf-security-group
 
 魔方财务 (ZJMF) 安全组显示插件 — 为 `zjmf_api` 代理类型产品的前台详情页注入安全组管理 Tab。
+<img width="1897" height="926" alt="image" src="https://github.com/user-attachments/assets/dcecbf22-2f80-4146-9635-ee8f0493fde6" />
+
 
 ## 背景与问题
 
